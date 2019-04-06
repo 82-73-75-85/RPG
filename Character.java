@@ -1,8 +1,8 @@
 class Character{
-   private int hp;
-   private int mp;
-   private int atk;
-   private String name;
+   protected int hp;
+   protected int mp;
+   protected int atk;
+   protected String name;
 
    public Character(){
       name = "unknown";
