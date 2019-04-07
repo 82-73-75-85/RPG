@@ -23,8 +23,18 @@ class Character{
    }
 
    private void damage(int atk, String name){
-      this.hp -= atk;
-      System.out.println(this.name+"は"+name+"から" + atk+"の攻撃を受けた！");
+      if(this.hp <= 0) {
+         System.out.println(this.name+"はもう倒れている");
+      }else{
+         System.out.println(this.name+"は"+name+"から" + atk+"の攻撃を受けた！");
+         if(this.hp<atk) {
+            this.hp -= atk;
+            System.out.println(this.name+"の体力は0になり倒れた...");
+         }else{
+            this.hp -= atk;
+            System.out.println(this.name+"の体力は"+this.hp+"になった！");
+         }
+      }
    }
 
    public void attack(Character c){

@@ -8,7 +8,7 @@ class Witch extends Character{
    }
 
    public void Magic(Character c){
-      System.out.println(name +"の魔法で攻撃した!!");
+      System.out.println(name +"は魔法で攻撃した!!");
       c.damage(atk*2,name);
    }
 
